@@ -13,7 +13,7 @@ public class SecondMax {
             numList.add(rand.nextInt(100)+1);
         }
 
-//        System.out.println(numList);
+        System.out.println(numList);
         secondMax(numList);
 
     }
@@ -23,9 +23,13 @@ public class SecondMax {
         int secondMax = 0;
 
         for(int i:numList){
-            if (i>max){
-                secondMax = max;
-                max = i;
+            if (i>secondMax){
+                if(i>max){
+                    secondMax = max;
+                    max = i;
+                }else if(i!=max){
+                    secondMax = i;
+                }
             }
         }
 
